@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+<html lang="en">
+<head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
 (function() {
   if (window.__playableTouchPatchInstalled) return;
   window.__playableTouchPatchInstalled = true;
@@ -18,70 +19,205 @@
     return origAdd.call(this, type, listener, options);
   };
 })();
-</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KenhuVlog Final Same Size</title><style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
-body{background:#000;color:#fff;overflow-x:hidden}
-.shell{max-width:1040px;margin:0 auto;background:#000}
-@media(min-width:768px){.shell{border:1px solid #cfcfcf;border-radius:14px;background:#0a0a0a;margin:14px auto}body{padding:14px}}
-.top{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #333;background:#0a0a0a}
-.left{display:flex;align-items:center;gap:10px}
-.avatar{width:40px;height:40px;border-radius:50%;border:1px solid #fff;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;background:#111}
-.name{font-size:18px;font-weight:800}.sub{font-size:10px;opacity:.8}
-.right{display:flex;gap:8px}.f-logo{width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;cursor:pointer}
-.content{padding:10px}@media(min-width:600px){.content{padding:18px 22px}}
-.titlebox{border:1px solid #fff;border-radius:10px;padding:12px;text-align:center;margin-bottom:14px}.titlebox h1{font-size:13px;font-weight:800;line-height:1.25}@media(min-width:600px){.titlebox h1{font-size:26px}}
-.cat{font-size:12px;font-weight:700;margin:14px 0 8px}.pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}.pill{border:1px solid #fff;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:700;background:transparent;color:#fff;cursor:pointer;white-space:nowrap}.pill.active{background:#fff;color:#000}
-.rowlabel{font-size:11px;font-weight:700;display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}.small-right{font-size:9px;color:#aaa;width:100%}@media(min-width:600px){.small-right{width:auto;margin-left:auto}}
-.upload-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.up{border:1px dashed #888;border-radius:8px;background:#0e0e0e;aspect-ratio:0.85;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px 4px;position:relative;overflow:hidden;cursor:pointer}@media(min-width:600px){.up{height:162px;aspect-ratio:auto;border-radius:10px;padding:12px}}.up img.prev{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.up .txt{position:relative;z-index:1}.up.has .txt{opacity:0}.up b{font-size:8px;display:block;margin:4px 0 2px}@media(min-width:600px){.up b{font-size:13px}}.up span{font-size:7px;color:#999}@media(min-width:600px){.up span{font-size:11px}}
-.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}@media(min-width:900px){.story-grid{grid-template-columns:repeat(5,1fr);gap:10px}}
-.card{border:1px solid #333;border-radius:8px;background:#111;overflow:hidden;display:flex;flex-direction:column;width:100%;height:100%}
-.card-head{display:flex;justify-content:space-between;padding:5px;gap:3px}.badge{font-size:8px;padding:3px 5px;border-radius:4px;font-weight:700;white-space:nowrap}.bg-gray{background:#3a3a3a;color:#fff}.bg-yellow{background:#fde68a;color:#000}.bg-orange{background:#f8b26a;color:#000}
-.thumb{margin:0 4px;background:#6b6b6b;border-radius:4px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.card-foot{padding:6px 4px;text-align:center;flex:1;display:flex;flex-direction:column;justify-content:space-between}.card-foot b{font-size:8px;line-height:1.1}@media(min-width:600px){.card-foot b{font-size:11px}}.card-foot i{font-size:7px;color:#bbb;margin-top:2px}.copy-btn{margin-top:4px;width:100%;border:1px solid #fff;background:transparent;color:#fff;border-radius:4px;padding:4px 2px;font-size:7px;font-weight:700;cursor:pointer}
-.table-wrap{border:1px solid #fff;border-radius:8px;overflow:hidden;margin-top:8px;overflow-x:auto}.table-wrap table{width:100%;min-width:560px;border-collapse:collapse;font-size:10px}th{padding:8px 6px;background:#161616;text-align:left;border-bottom:1px solid #333}td{padding:8px 6px;border-bottom:1px solid #222;vertical-align:top}
-.prompt-box{margin-top:14px;border:1px solid #4ade80;border-radius:8px;background:#0f1a12;padding:10px}.prompt-box h3{color:#4ade80;font-size:11px;margin-bottom:6px}.prompt-text{background:#000;border:1px solid #333;border-radius:6px;padding:8px;font-size:9px;line-height:1.4;white-space:pre-wrap;color:#ddd;max-height:200px;overflow:auto;word-break:break-word}
-.footer{border-top:1px solid #333;margin-top:14px;padding:10px;display:flex;flex-direction:column;gap:8px}@media(min-width:600px){.footer{flex-direction:row;justify-content:space-between;padding:14px 20px}}.f-left{font-size:9px;color:#aaa;text-align:center}.footer-actions{display:flex;gap:6px;justify-content:center}.btn{padding:8px 10px;border-radius:6px;font-size:9px;font-weight:700;cursor:pointer}.btn-o{border:1px solid #fff;background:transparent;color:#fff}.btn-w{background:#fff;color:#000}.status{border:1px solid #4ade80;color:#4ade80;border-radius:999px;padding:4px 8px;font-size:9px}
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;color:#000;padding:10px 16px;border-radius:999px;font-size:11px;font-weight:700;z-index:100;display:none}
-</style></head><body>
-<div class="shell">
-<div class="top"><div class="left"><div class="avatar" id="av">👤</div><div><div class="name">KenhuVlog</div><div class="sub">Follow for more viral prompts</div></div></div><div class="right"><div class="f-logo" id="fBtn">f</div></div></div>
-<div class="content">
-<div class="titlebox"><h1>10-SECOND TIKTOK VIDEO STORYBOARD<br>• 5 SCENES x 2 SECONDS</h1></div>
-<div class="cat">Category:</div>
-<div class="pills"><button class="pill active">Beauty</button><button class="pill">Fashion</button><button class="pill">Health</button><button class="pill">Home</button><button class="pill">Food</button><button class="pill">Electronics</button><button class="pill">Toys</button></div>
-<div class="rowlabel">🔒 ROW 1 LOCKS — Upload assets to lock content</div>
-<div class="upload-grid">
-<div class="up" id="u1"><img class="prev" hidden><div class="txt"><div>☁️</div><b>Upload Your Model Here</b><span>PNG/JPG • ≤5MB</span></div><input type="file" hidden accept="image/*"></div>
-<div class="up" id="u2"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Front Here</b><span>Front view</span></div><input type="file" hidden accept="image/*"></div>
-<div class="up" id="u3"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Back Here</b><span>Back view</span></div><input type="file" hidden accept="image/*"></div>
-</div>
-<div class="rowlabel">🗂️ ROW 2 — 5 SCENE STORYBOARD <span class="small-right">Each = 2s • 9:16 • 1080×1920</span></div>
-<div class="story-grid" id="storyGrid"></div>
-<div class="prompt-box"><h3>📋 MASTER PROMPT FOR CHATGPT / GEMINI</h3><div class="prompt-text" id="masterPrompt">Generate 5 UGC TikTok video scenes (2s each, 9:16, 1080x1920, 30fps, UGC Natural)
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10-SEC TIKTOK STORYBOARD - BLACK</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{background:#070708;color:#fff;padding:24px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:28px;letter-spacing:-0.5px;text-align:center;font-weight:800}
+.sub{text-align:center;opacity:.6;font-size:11px;letter-spacing:2px;margin-top:6px}
+.pills{display:flex;gap:8px;overflow:auto;padding:18px 0;scrollbar-width:none}
+.pill{white-space:nowrap;border:1px solid #2a2a2a;background:#111;padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer}
+.pill.active{background:#fff;color:#000;border-color:#fff;font-weight:700}
+.input-wrap{text-align:center;margin:14px 0}
+.input-wrap input{background:#111;border:1px solid #2a2a2a;color:#fff;padding:14px 18px;border-radius:12px;width:100%;max-width:420px;font-size:14px;text-align:center}
+.row-label{font-size:11px;letter-spacing:2px;opacity:.5;margin:28px 0 12px;font-weight:700}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{border:1px solid #232323;background:#101010;border-radius:16px;padding:14px}
+.card b{font-size:11px;letter-spacing:1px}
+.card .ph{height:220px;background:#161616;border-radius:12px;margin:10px 0;display:flex;align-items:center;justify-content:center;font-size:30px;opacity:.3}
+.card p{font-size:11px;opacity:.6;line-height:1.4}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.scene{border:1px solid #232323;background:#101010;border-radius:14px;overflow:hidden}
+.scene .top{font-size:10px;padding:8px 10px;background:#151515;font-weight:700;letter-spacing:1px}
+.scene .img{height:170px;background:#161616;display:flex;align-items:center;justify-content:center;font-size:24px}
+.scene .badge{margin:6px;background:#000;border:1px solid #2a2a2a;font-size:10px;padding:6px 8px;border-radius:8px;text-align:center}
+.details{border:1px solid #232323;border-radius:16px;overflow:hidden;margin-top:12px}
+.drow{display:grid;grid-template-columns:130px repeat(5,1fr);border-bottom:1px solid #1e1e1e}
+.drow:last-child{border:0}
+.dh{background:#111;padding:10px;font-size:10px;font-weight:800;letter-spacing:1px}
+.dc{padding:8px;font-size:11px;border-left:1px solid #1e1e1e;line-height:1.3;opacity:.9}
+.footer3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.fcard{border:1px solid #232323;background:#0f0f0f;border-radius:14px;padding:14px;font-size:11px;line-height:1.5}
+.prompt-box{margin-top:28px;border:1px solid #fff;background:#0e0e0e;border-radius:18px;padding:18px}
+.prompt-box textarea{width:100%;background:#000;color:#fff;border:1px solid #2a2a2a;border-radius:12px;padding:14px;font-size:12px;min-height:280px}
+.btn{padding:12px 18px;border-radius:100px;border:1px solid #fff;background:#fff;color:#000;font-weight:800;cursor:pointer}
+.fb{margin:40px auto 10px;text-align:center}
+.fb button{border:1px solid #fff;background:transparent;color:#fff;padding:14px 26px;border-radius:100px;font-weight:800;cursor:pointer}
+.fb button:hover{background:#fff;color:#000}
+@media(max-width:800px){.grid3,.grid5,.footer3{grid-template-columns:1fr}.drow{grid-template-columns:1fr}.dh{border-bottom:1px solid #1e1e1e}.dc{border-left:0;border-bottom:1px solid #1a1a1a}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>10-SECOND TIKTOK VIDEO STORYBOARD</h1>
+<div class="sub">• 5 SCENES x 2 SECONDS • PIPELINE 1 PROMPT • REF SWAP</div>
 
-MODEL LOCK: Use uploaded model photo
-PRODUCT LOCK: Use uploaded product front/back
+<div class="pills" id="pills"></div>
+<div class="input-wrap"><input id="prodInput" placeholder="Enter Product Name (e.g. Black Halter Dress)" value="Black Halter Ruffle Dress"></div>
 
-SCENE 1 (0-2s): Smiling wave - Text: "Hi! Tingnan mo to!" - Prompt: UGC selfie filipina waving holding product iPhone keep identity
-SCENE 2 (2-4s): Show front details - Text: "Ang ganda ng details!" - Prompt: Close up front view details
-SCENE 3 (4-6s): Flip to back - Text: "May back feature!" - Prompt: Flip to back point feature
-SCENE 4 (6-8s): Real life use - Text: "Perfect for daily!" - Prompt: Lifestyle using mirror
-SCENE 5 (8-10s): CTA - Text: "Check out now!" - Prompt: Smile thumbs up CTA
+<div class="row-label">ROW 1 LOCKS:</div>
+<div class="grid3">
+<div class="card"><b>LOCKED MODEL • Image 1</b><div class="ph">👩</div><p>Same face hair skin tone body all scenes<br>• Friendly cheerful<br>• No changes</p></div>
+<div class="card"><b>LOCKED PRODUCT FRONT • Image 2</b><div class="ph">👗</div><p id="prodDesc1">• Black halter dress<br>• Deep V Halter Ruffle front A-line<br>• Preserve 100% PRODUCT ONLY</p></div>
+<div class="card"><b>LOCKED PRODUCT BACK • Image 3</b><div class="ph">👗</div><p id="prodDesc2">• Open back halter tie<br>• Same black fabric Flowy A-line<br>• Preserve 100% PRODUCT ONLY</p></div>
+</div>
 
-Style: UGC Natural, bright, Tagalog subs</div><button class="btn btn-w" style="width:100%;margin-top:8px;min-height:44px" onclick="copyMaster()">📋 COPY FOR GPT/GEMINI</button></div>
-<div class="rowlabel">🗂️ SCENE DETAILS TABLE</div>
-<div class="table-wrap"><table><tr><th>Scene</th><th>Pose</th><th>Text Overlay</th><th>Voice Over</th></tr><tr><td>1 • 0-2s</td><td>Smiling wave</td><td>"Hi! Tingnan mo to!"</td><td>"Kumusta! Ipapakita ko..."</td></tr><tr><td>2 • 2-4s</td><td>Hold close</td><td>"Ang ganda ng details!"</td><td>"Ang linis at sleek..."</td></tr><tr><td>3 • 4-6s</td><td>Flip to back</td><td>"May back feature!"</td><td>"May non-slip..."</td></tr><tr><td>4 • 6-8s</td><td>Real use</td><td>"Perfect for daily!"</td><td>"Magaan, bagay..."</td></tr><tr><td>5 • 8-10s</td><td>Thumbs up CTA</td><td>"Check out now!"</td><td>"Nasa bio link!"</td></tr></table></div>
+<div class="row-label" id="row2label">ROW 2 HOOK • FEATURES • EXPERIENCE • BENEFITS • CTA • TIKTOK ONLY • Tagalog • no emoji</div>
+<div class="grid5" id="sceneGrid"></div>
+
+<div class="row-label">ROW 4 • PER SCENE DETAILS:</div>
+<div class="details" id="details"></div>
+
+<div class="footer3">
+<div class="fcard"><b>VIDEO DETAILS</b><br>Total Duration: 10 Seconds<br>Format: 9:16 Vertical TikTok<br>Speed: Normal<br>Transition: Quick cut / Hard cut</div>
+<div class="fcard"><b>Location:</b><br>Indoor minimal clean bright<br>Lighting: Natural soft light<br><br><b>GLOBAL RULES:</b> Model and product 100% locked - Model from Image 1 only - Product from Image 2 PRODUCT EXTRACTION ONLY - Photorealistic</div>
+<div class="fcard"><b>AUDIO STYLE:</b><br>Female voice<br>Friendly excited natural tone<br>Clear engaging Tagalog delivery<br>Background music: Upbeat trendy cute vibe<br>Copyright free</div>
 </div>
-<div class="footer"><div class="f-left">VIDEO DETAILS<br>10s • 9:16 • 30fps • UGC Natural • MP4</div><div class="footer-actions"><span class="status">● Ready</span><button class="btn btn-o" onclick="copyMaster()">Export</button><button class="btn btn-w" onclick="copyMaster()">Generate ▸</button></div></div>
+
+<div class="prompt-box">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+<b>FINAL PROMPT - COPY FOR AI</b>
+<div><button class="pill active" data-ai="gemini" onclick="setAI('gemini')">Gemini</button>
+<button class="pill" data-ai="chatgpt" onclick="setAI('chatgpt')">ChatGPT</button>
+<button class="pill" data-ai="meta" onclick="setAI('meta')">Meta AI</button></div>
+<button class="btn" onclick="copyPrompt()">COPY PROMPT</button>
 </div>
-<div class="toast" id="toast">Copied!</div><input type="file" id="avInput" hidden accept="image/*">
+<textarea id="promptOut"></textarea>
+</div>
+
+<div class="fb">
+<p style="opacity:.6;font-size:12px;margin-bottom:10px">Gusto mo pa ng ganitong viral prompts?</p>
+<button onclick="window.open('https://www.facebook.com/share/1Fs7NZdE1F/','_blank')">Follow me on Facebook 🖤</button>
+</div>
+
+</div>
 <script>
-const scenes=[{time:"0-2s",title:"Cute wave & smile",sub:"Hi! Tingnan mo to!",prompt:"UGC selfie filipina waving holding LED mirror iPhone keep identity"},{time:"2-4s",title:"Show product up close",sub:"Ang ganda ng details!",prompt:"Close up front view product details UGC"},{time:"4-6s",title:"Flip to back view",sub:"May back feature!",prompt:"Flip to back point foldable feature"},{time:"6-8s",title:"Use it in real life",sub:"Perfect for daily!",prompt:"Lifestyle using mirror applying makeup"},{time:"8-10s",title:"Smile & CTA",sub:"Check out now!",prompt:"Smile thumbs up CTA pointing down"}];
-const grid=document.getElementById('storyGrid');scenes.forEach((s,i)=>{const d=document.createElement('div');d.className='card';d.innerHTML=`<div class="card-head"><span class="badge bg-gray">Scene ${i+1}</span><span class="badge ${i%2==0?'bg-orange':'bg-yellow'}">${s.time}</span></div><div class="thumb">🖼️</div><div class="card-foot"><b>Scene ${i+1}: ${s.title}</b><i>${s.sub}</i><button class="copy-btn" onclick="copyScene(${i})">📋 Copy</button></div>`;grid.appendChild(d);});
-function copyScene(i){const t=`Scene ${i+1} (${scenes[i].time}) - ${scenes[i].title}\nPrompt: ${scenes[i].prompt}\nText: "${scenes[i].sub}"\nFormat: 9:16 1080x1920`;navigator.clipboard.writeText(t).then(()=>showToast(`Scene ${i+1} Copied!`));}
-function copyMaster(){const t=document.getElementById('masterPrompt').innerText;navigator.clipboard.writeText(t).then(()=>showToast("Master Prompt Copied!"));}
-function showToast(m){const t=document.getElementById('toast');t.innerText="✅ "+m;t.style.display='block';setTimeout(()=>t.style.display='none',2500);}
-document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>p.classList.toggle('active'));document.getElementById('fBtn').onclick=()=>window.open('https://www.facebook.com/share/1Fs7NZdE1F/','_blank');document.getElementById('av').onclick=()=>document.getElementById('avInput').click();document.getElementById('avInput').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{document.getElementById('av').innerHTML=`<img src="${ev.target.result}" style="width:100%;height:100%;object-fit:cover">`};r.readAsDataURL(f);};function bind(id){const box=document.getElementById(id),input=box.querySelector('input'),prev=box.querySelector('img.prev');box.onclick=()=>input.click();input.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{prev.src=ev.target.result;prev.hidden=false;box.classList.add('has')};r.readAsDataURL(f);};}
-bind('u1');bind('u2');bind('u3');
+const categories = {
+"Fashion & Apparel": [
+{scene:"cute wave",pose:"Small natural wave Gentle smile Arm raised in wave",text:"Ang cute nito sa personal",vo:"Grabe ang cute nito sa personal!"},
+{scene:"hold skirt",pose:"Holding skirt Gentle lift Small sway",text:"Magaan at preskong isuot",vo:"Magaan at presko kahit whole day"},
+{scene:"half-turn back halter",pose:"Slow turn to back Looking over shoulder Calm smile",text:"Sexy halter ruffle design",vo:"May sexy halter at ruffle detail pa"},
+{scene:"happy walking",pose:"Normal walking Natural stride Hair gently moving",text:"Perfect pang date at summer",vo:"Perfect pang date beach o gala"},
+{scene:"heart pose",pose:"Heart hands pose Natural stop Radiant smile",text:"Checkout na bago maubos",vo:"Checkout mo na bago maubos stock sa TikTok Shop"}
+],
+"Beauty & Skincare": [
+{scene:"close up glow",pose:"Close up to camera Soft smile Touch cheek",text:"Ang glow agad sa first use",vo:"Grabe ang glow agad sa first use!"},
+{scene:"apply product",pose:"Applying product Gentle dab Calm face",text:"Lightweight hindi malagkit",vo:"Lightweight lang hindi malagkit sa face"},
+{scene:"before after",pose:"Side to side before after comparison Smile",text:"Kita difference in 7 days",vo:"Kita agad difference in 7 days mga sis"},
+{scene:"happy mirror",pose:"Mirror selfie Confident smile Hair tuck",text:"Perfect pang everyday awra",vo:"Perfect pang everyday awra at date"},
+{scene:"budol checkout",pose:"Heart hands Holding product Wink",text:"Checkout na bago maubos",vo:"I-checkout mo na bago maubos sa TikTok Shop"}
+],
+"Food & Grocery": [
+{scene:"unboxing",pose:"Unboxing from package Excited open",text:"Grabe packaging pa lang panalo",vo:"Grabe packaging pa lang panalo na!"},
+{scene:"pour steam",pose:"Pouring Hot steam close up Slow mo",text:"Bango pa lang nakakagutom",vo:"Bango pa lang nakakagutom na mga mare"},
+{scene:"first bite",pose:"First bite Eyes closed Yummy face",text:"Lasang lasa pagka creamy",vo:"Lasang lasa pagka creamy at sarap"},
+{scene:"sarap reaction",pose:"Happy eating Nodding Thumbs up",text:"Perfect pang meryenda at movie",vo:"Perfect pang meryenda at movie marathon"},
+{scene:"checkout",pose:"Holding product Heart hands",text:"Checkout na bago maubos stock",vo:"Checkout na bago maubos stock sa TikTok"}
+],
+"Health & Supplements": [
+{scene:"unbox",pose:"Unboxing bottle Confident smile",text:"Finally dumating na",vo:"Finally dumating na health budol ko!"},
+{scene:"dosage",pose:"Holding capsule Glass water",text:"1 a day lang ang dali",vo:"One a day lang ang dali inumin"},
+{scene:"energy",pose:"Stretching Energetic walk",text:"Ramdam energy buong araw",vo:"Ramdam ko energy buong araw hindi na haggard"},
+{scene:"glow result",pose:"Mirror confident smile",text:"Kita glow at gaan sa katawan",vo:"Kita glow at gaan sa katawan after 2 weeks"},
+{scene:"checkout",pose:"Heart hands with bottle",text:"Checkout na sa TikTok Shop",vo:"Checkout mo na bago mag price increase"}
+],
+"Home & Kitchen": [
+{scene:"unbox",pose:"Unboxing Excited open Box",text:"Ang ganda ng quality pag open",vo:"Ang ganda ng quality pag open pa lang!"},
+{scene:"demo use",pose:"Demo using product in kitchen",text:"Ang dali gamitin kahit everyday",vo:"Ang dali gamitin kahit everyday use pa"},
+{scene:"before after",pose:"Before after kitchen transformation",text:"Laking ginhawa sa bahay",vo:"Laking ginhawa sa bahay ang linis tingnan"},
+{scene:"satisfied",pose:"Happy satisfied smile Relax",text:"Perfect pang bahay at gift",vo:"Perfect pang bahay at pang gift pa"},
+{scene:"checkout",pose:"Holding product Wink",text:"Checkout na bago maubos",vo:"Checkout na bago maubos sa TikTok Shop"}
+],
+"Electronics": [
+{scene:"unbox",pose:"Unboxing Excited Fast open",text:"Grabe packaging ang premium",vo:"Grabe packaging pa lang premium na!"},
+{scene:"power on",pose:"Power on button Pressing Light on",text:"Ang bilis i-setup",vo:"Ang bilis lang i-setup one click lang"},
+{scene:"feature test",pose:"Testing features Close up hands",text:"Lakas ng features for price",vo:"Lakas ng features for its price mga boss"},
+{scene:"happy use",pose:"Using product Happy relaxed",text:"Perfect pang work at gaming",vo:"Perfect pang work at gaming setup"},
+{scene:"checkout",pose:"Heart hands with gadget",text:"Checkout na bago maubos",vo:"Checkout na bago tumaas price sa TikTok Shop"}
+],
+"Toys & Gadgets": [
+{scene:"unbox",pose:"Unboxing Excited kid energy",text:"Ang cute ng packaging",vo:"Ang cute ng packaging pa lang!"},
+{scene:"play demo",pose:"Playing demo Moving product",text:"Ang dali laruin nakakaaliw",vo:"Ang dali laruin nakakaaliw buong araw"},
+{scene:"features",pose:"Showing features Close up",text:"Marami features for kids",vo:"Marami features safe pa for kids"},
+{scene:"happy kid",pose:"Happy smile Jumping",text:"Perfect pang gift at bonding",vo:"Perfect pang gift at family bonding"},
+{scene:"checkout",pose:"Hugging toy Heart hands",text:"Checkout na bago maubos",vo:"Checkout na bago maubos sa TikTok Shop"}
+]
+};
+let currentCat="Fashion & Apparel", currentAI="gemini";
+const pillsEl=document.getElementById('pills'), grid=document.getElementById('sceneGrid'), detailsEl=document.getElementById('details'), prodInput=document.getElementById('prodInput');
+function initPills(){
+pillsEl.innerHTML="";
+Object.keys(categories).forEach(c=>{
+const b=document.createElement('button');
+b.className='pill'+(c===currentCat?' active':'');
+b.textContent=c;
+b.onclick=()=>{currentCat=c;initPills();render();};
+pillsEl.appendChild(b);
+});
+}
+function render(){
+const data=categories[currentCat];
+grid.innerHTML="";
+data.forEach((s,i)=>{
+grid.innerHTML+=`<div class=scene><div class=top>SCENE ${i+1} • ${i*2}-${(i+1)*2}s<br>${s.scene}</div><div class=img>🎬</div><div class=badge>${s.text}</div></div>`;
+});
+let html=`<div class=drow><div class=dh>• POSE / MOVEMENT:</div>${data.map(s=>`<div class=dc>${s.pose}</div>`).join('')}</div>`;
+html+=`<div class=drow><div class=dh>• TEXT OVERLAY TAGALOG:</div>${data.map(s=>`<div class=dc>${s.text}</div>`).join('')}</div>`;
+html+=`<div class=drow><div class=dh>• VOICE OVER FEMALE TAGALOG:</div>${data.map(s=>`<div class=dc>${s.vo}</div>`).join('')}</div>`;
+detailsEl.innerHTML=html;
+generatePrompt();
+}
+function setAI(ai){currentAI=ai;document.querySelectorAll('[data-ai]').forEach(b=>b.classList.toggle('active',b.dataset.ai===ai));generatePrompt();}
+function generatePrompt(){
+const product=prodInput.value||"Black Halter Dress";
+const data=categories[currentCat];
+let prompt=`10-SECOND TIKTOK VIDEO STORYBOARD - 5 SCENES x 2 SECONDS
+CATEGORY: ${currentCat}
+PRODUCT: ${product}
+
+ROW 1 LOCKS (DO NOT CHANGE):
+- LOCKED MODEL Image 1: Same face hair skin tone body all scenes, Friendly cheerful, No changes, From ${product} reference model
+- LOCKED PRODUCT FRONT Image 2: PRODUCT EXTRACTION ONLY - ${product} - Preserve 100% PRODUCT ONLY
+- LOCKED PRODUCT BACK Image 3: PRODUCT EXTRACTION ONLY - ${product} back view - Preserve 100% PRODUCT ONLY
+
+ROW 2 HOOK • FEATURES • EXPERIENCE • BENEFITS • CTA • TIKTOK ONLY • Tagalog • no emoji
+- 5 RANDOM CUTE POSES • NO REPEAT • 9:16 vertical TikTok UGC natural light indoor minimal clean bright
+
+SCENES:
+`;
+data.forEach((s,i)=>{prompt+=`SCENE ${i+1} ${i*2}-${(i+1)*2}s ${s.scene.toUpperCase()}: Pose=${s.pose} | TEXT OVERLAY="${s.text}" | VO="${s.vo}"
+`;});
+prompt+=`
+ROW 4 PER SCENE DETAILS: As above
+
+VIDEO DETAILS: Total Duration 10 Seconds Format 9:16 Vertical TikTok Speed Normal Transition Quick cut Hard cut Location Indoor minimal clean bright Lighting Natural soft light
+
+AUDIO STYLE: Female voice Friendly excited natural tone Clear engaging Tagalog delivery Background music Upbeat trendy cute vibe copyright free
+
+GLOBAL RULES: Model and product 100% locked - Model from Image 1 only - Product from Image 2 PRODUCT EXTRACTION ONLY - Photorealistic - Same model same ${product} all scenes - No emoji - Voice Over Female Tagalog - Text Overlay Tagalog per category ${currentCat}
+
+Ref1=Model Ref2=Product ${product} Ref3=Layout This Storyboard Ref4=Link Affiliate
+PIPELINE 1 PROMPT READY FOR ${currentAI.toUpperCase()}`;
+document.getElementById('promptOut').value=prompt;
+document.getElementById('prodDesc1').innerHTML=`• ${product}<br>• Product Front View<br>• Preserve 100% PRODUCT ONLY`;
+document.getElementById('prodDesc2').innerHTML=`• ${product} Back View<br>• Same fabric<br>• Preserve 100% PRODUCT ONLY`;
+}
+function copyPrompt(){const t=document.getElementById('promptOut');t.select();document.execCommand('copy');alert('Prompt copied! Paste to '+currentAI);}
+prodInput.addEventListener('input',generatePrompt);
+initPills();render();
 </script>
-</body></html>
+</body>
+</html>
