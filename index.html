@@ -1,6 +1,25 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KenhuVlog - Final No Product Name</title>
+<html lang="en"><head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KenhuVlog - With Copy Prompt</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
 body{background:#000;padding:14px;color:#fff}
@@ -8,33 +27,27 @@ body{background:#000;padding:14px;color:#fff}
 .top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #333}
 .left{display:flex;align-items:center;gap:12px}
 .avatar{width:52px;height:52px;border-radius:50%;border:1px solid #fff;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;background:#111}
-.avatar img{width:100%;height:100%;object-fit:cover}
-.name{font-size:24px;font-weight:800;line-height:1}
+.name{font-size:24px;font-weight:800}
 .sub{font-size:13px;margin-top:4px;opacity:.8}
 .right{display:flex;align-items:center;gap:16px}
-.r-icon{width:26px;height:26px;border:1px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
 .f-logo{width:44px;height:44px;border:1.5px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;cursor:pointer}
 .content{padding:18px 22px}
 .titlebox{border:1px solid #fff;border-radius:10px;padding:20px;text-align:center;margin-bottom:20px}
-.titlebox h1{font-size:26px;line-height:1.25;letter-spacing:.3px;font-weight:800}
+.titlebox h1{font-size:26px;line-height:1.25;font-weight:800}
 .cat{font-size:14px;font-weight:700;margin:18px 0 12px}
-.pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
 .pill{border:1px solid #fff;border-radius:999px;padding:8px 18px;font-size:13px;font-weight:700;background:transparent;color:#fff;cursor:pointer}
 .pill.active{background:#fff;color:#000}
-.rowlabel{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;margin:26px 0 12px;letter-spacing:.2px}
-.small-right{margin-left:auto;font-size:11px;font-weight:400;color:#aaa}
+.rowlabel{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;margin:26px 0 12px}
+.small-right{margin-left:auto;font-size:11px;color:#aaa;font-weight:400}
 .upload-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .up{border:1px dashed #888;border-radius:10px;background:#0e0e0e;height:162px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;position:relative;overflow:hidden;cursor:pointer}
 .up img.prev{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.up.has img.prev{display:block}
-.up .txt{position:relative;z-index:1}
 .up.has .txt{opacity:0}
-.up:hover{border-color:#fff}
 .up b{font-size:13px;display:block;margin:8px 0 4px}
 .up span{font-size:11px;color:#999}
-.icon{font-size:18px}
 .story-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.card{border:1px solid #333;border-radius:10px;background:#111;overflow:hidden}
+.card{border:1px solid #333;border-radius:10px;background:#111;overflow:hidden;position:relative}
 .card-head{display:flex;justify-content:space-between;padding:8px}
 .badge{font-size:11px;padding:4px 8px;border-radius:6px;font-weight:700}
 .bg-gray{background:#3a3a3a;color:#fff}
@@ -44,90 +57,138 @@ body{background:#000;padding:14px;color:#fff}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .card-foot{padding:10px 8px;text-align:center}
 .card-foot b{font-size:11px;display:block;line-height:1.2}
-.card-foot i{font-size:10px;color:#bbb;display:block;margin-top:4px;font-style:normal}
+.card-foot i{font-size:10px;color:#bbb;display:block;margin-top:4px}
+.copy-btn{margin-top:8px;width:100%;border:1px solid #fff;background:transparent;color:#fff;border-radius:6px;padding:6px;font-size:10px;font-weight:700;cursor:pointer}
+.copy-btn:hover{background:#fff;color:#000}
 .table-wrap{border:1px solid #fff;border-radius:10px;overflow:hidden;margin-top:10px}
 table{width:100%;border-collapse:collapse;font-size:12px}
-th{padding:12px 10px;background:#161616;text-align:left;border-bottom:1px solid #333;font-size:12px}
+th{padding:12px 10px;background:#161616;text-align:left;border-bottom:1px solid #333}
 td{padding:10px;border-bottom:1px solid #222;vertical-align:top}
+.prompt-box{margin-top:20px;border:1px solid #4ade80;border-radius:10px;background:#0f1a12;padding:16px}
+.prompt-box h3{color:#4ade80;font-size:14px;margin-bottom:10px}
+.prompt-text{background:#000;border:1px solid #333;border-radius:8px;padding:12px;font-size:11px;line-height:1.5;white-space:pre-wrap;color:#ddd;max-height:300px;overflow:auto}
 .footer{border-top:1px solid #333;margin-top:18px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.f-left{font-size:11px;color:#aaa;line-height:1.6}
 .btn{padding:9px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer}
 .btn-o{border:1px solid #fff;background:transparent;color:#fff}
 .btn-w{background:#fff;color:#000;border:1px solid #fff}
-.status{border:1px solid #4ade80;color:#4ade80;border-radius:999px;padding:5px 10px;font-size:11px;display:inline-flex;align-items:center;gap:6px}
-.dot{width:6px;height:6px;background:#4ade80;border-radius:50%}
+.status{border:1px solid #4ade80;color:#4ade80;border-radius:999px;padding:5px 10px;font-size:11px;display:inline-flex;gap:6px}
 @media(max-width:800px){.story-grid{grid-template-columns:repeat(2,1fr)}.upload-grid{grid-template-columns:1fr}}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;color:#000;padding:10px 18px;border-radius:999px;font-size:12px;font-weight:700;z-index:100;display:none}
 </style></head><body>
 <div class="shell">
-<div class="top">
-<div class="left">
-<div class="avatar" id="av"><span>👤</span></div>
-<div><div class="name">KenhuVlog</div><div class="sub">Follow for more viral prompts</div></div>
-</div>
-<div class="right">
-<div class="r-icon">🔔</div><div class="r-icon">⚙️</div><div class="r-icon">?</div><div class="f-logo" id="fBtn">f</div>
-</div>
-</div>
+<div class="top"><div class="left"><div class="avatar" id="av">👤</div><div><div class="name">KenhuVlog</div><div class="sub">Follow for more viral prompts</div></div></div><div class="right"><div class="f-logo" id="fBtn">f</div></div></div>
 <div class="content">
 <div class="titlebox"><h1>10-SECOND TIKTOK VIDEO STORYBOARD<br>• 5 SCENES x 2 SECONDS</h1></div>
 <div class="cat">Category:</div>
-<div class="pills" id="pills"><button class="pill">Beauty</button><button class="pill">Fashion</button><button class="pill">Health</button><button class="pill">Home</button><button class="pill">Food</button><button class="pill">Electronics</button><button class="pill">Toys</button></div>
+<div class="pills"><button class="pill active">Beauty</button><button class="pill">Fashion</button><button class="pill">Health</button><button class="pill">Home</button><button class="pill">Food</button><button class="pill">Electronics</button><button class="pill">Toys</button></div>
 
 <div class="rowlabel">🔒 ROW 1 LOCKS — Upload assets to lock content</div>
 <div class="upload-grid">
-<div class="up" id="u1"><img class="prev" hidden><div class="txt"><div class="icon">☁️</div><b>Upload Your Model Here</b><span>PNG/JPG • ≤5MB • headshot recommended</span></div><input type="file" hidden accept="image/*"></div>
-<div class="up" id="u2"><img class="prev" hidden><div class="txt"><div class="icon">🔒</div><b>Upload Product Front Here</b><span>Front view • Clean background • clear photo</span></div><input type="file" hidden accept="image/*"></div>
-<div class="up" id="u3"><img class="prev" hidden><div class="txt"><div class="icon">🔒</div><b>Upload Product Back Here</b><span>Back view • Clean background • clear photo</span></div><input type="file" hidden accept="image/*"></div>
+<div class="up" id="u1"><img class="prev" hidden><div class="txt"><div>☁️</div><b>Upload Your Model Here</b><span>PNG/JPG • ≤5MB</span></div><input type="file" hidden accept="image/*"></div>
+<div class="up" id="u2"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Front Here</b><span>Front view • Clean bg</span></div><input type="file" hidden accept="image/*"></div>
+<div class="up" id="u3"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Back Here</b><span>Back view • Clean bg</span></div><input type="file" hidden accept="image/*"></div>
 </div>
 
-<div class="rowlabel">🗂️ ROW 2 — 5 SCENE STORYBOARD <span class="small-right">Each scene = 2 seconds • 9:16 vertical • 1080×1920</span></div>
-<div class="story-grid">
-<div class="card"><div class="card-head"><span class="badge bg-gray">Scene 1</span><span class="badge bg-orange">0-2s</span></div><div class="thumb" id="t1">🖼️</div><div class="card-foot"><b>Scene 1: Cute wave & smile</b><i>Subtitle (Hi! Tingnan mo to!)</i></div></div>
-<div class="card"><div class="card-head"><span class="badge bg-gray">Scene 2</span><span class="badge bg-yellow">2-4s</span></div><div class="thumb" id="t2">🖼️</div><div class="card-foot"><b>Scene 2: Show product up close</b><i>Subtitle: "Ang ganda ng details!"</i></div></div>
-<div class="card"><div class="card-head"><span class="badge bg-gray">Scene 3</span><span class="badge bg-yellow">4-6s</span></div><div class="thumb" id="t3">🖼️</div><div class="card-foot"><b>Scene 3: Flip to back view</b><i>"May back feature din siya!"</i></div></div>
-<div class="card"><div class="card-head"><span class="badge bg-gray">Scene 4</span><span class="badge bg-yellow">6-8s</span></div><div class="thumb" id="t4">🖼️</div><div class="card-foot"><b>Scene 4: Use it in real life</b><i>"Perfect for daily use!"</i></div></div>
-<div class="card"><div class="card-head"><span class="badge bg-gray">Scene 5</span><span class="badge bg-yellow">8-10s</span></div><div class="thumb" id="t5">🖼️</div><div class="card-foot"><b>Scene 5: Smile & CTA</b><i>Subtitle: "Check out now!"</i></div></div>
+<div class="rowlabel">🗂️ ROW 2 — 5 SCENE STORYBOARD <span class="small-right">Each scene = 2 seconds • 9:16 vertical</span></div>
+<div class="story-grid" id="storyGrid"></div>
+
+<div class="prompt-box">
+<h3>📋 MASTER PROMPT FOR CHATGPT / GEMINI — COPY THIS!</h3>
+<div class="prompt-text" id="masterPrompt">Generate 5 UGC TikTok video scenes (2 seconds each, 9:16 vertical, 1080x1920, 30fps, UGC Natural style)
+
+MODEL LOCK: Use uploaded model photo - keep same face, skin tone, hairstyle
+PRODUCT FRONT LOCK: Use uploaded product front image
+PRODUCT BACK LOCK: Use uploaded product back image
+
+Category: Beauty / Portable LED Mirror
+
+SCENE 1 (0-2s): Smiling, hand wave to camera, friendly gesture
+- Text Overlay: "Hi! Tingnan mo to!" 
+- Voice Over (Female Tagalog): "Kumusta! Ipapakita ko sa'yo itong cool na item."
+- Prompt: "UGC selfie video, cute filipina model waving, holding product, bright natural lighting, iPhone quality, vertical 9:16, photorealistic, keep model identity"
+
+SCENE 2 (2-4s): Hold product closer to camera, tilt to highlight details
+- Text Overlay: "Ang ganda ng details!"
+- Voice Over: "Pansinin mo, ang linis at sleek ng design nito."
+- Prompt: "Close up of model holding portable LED makeup mirror front view, show details, natural background, UGC style"
+
+SCENE 3 (4-6s): Flip the product to show the back, point to feature
+- Text Overlay: "May back feature din siya!"
+- Voice Over: "May non-slip at foldable sa likod, kaya super handy."
+- Prompt: "Model flipping product to show back side, pointing to foldable stand feature, UGC demo"
+
+SCENE 4 (6-8s): Use product naturally, as if daily use, smile
+- Text Overlay: "Perfect for daily use!"
+- Voice Over: "Magaan, madaling dalhin, bagay sa araw-araw."
+- Prompt: "Model using LED mirror in real life, applying makeup, natural light, lifestyle UGC"
+
+SCENE 5 (8-10s): Thumbs up, smiling, point down towards CTA
+- Text Overlay: "Check out now!"
+- Voice Over: "Get yours now — nasa bio ang link! Salamat!"
+- Prompt: "Model smiling thumbs up, pointing down to CTA, cheerful, UGC closing shot, keep product visible"
+
+Style: UGC Natural, iPhone, bright, Tagalog subtitles, no watermark</div>
+<button class="btn btn-w" style="margin-top:10px;width:100%" onclick="copyMaster()">📋 COPY MASTER PROMPT FOR GPT/GEMINI</button>
 </div>
 
 <div class="rowlabel">🗂️ SCENE DETAILS TABLE</div>
 <div class="table-wrap"><table>
-<tr><th>Scene</th><th>Pose / Movement</th><th>Text Overlay —<br><span style="color:#888;font-weight:400">Tagalog</span></th><th>Voice Over —<br><span style="color:#888;font-weight:400">Female (Tagalog)</span></th></tr>
+<tr><th>Scene</th><th>Pose / Movement</th><th>Text Overlay — Tagalog</th><th>Voice Over — Female (Tagalog)</th></tr>
 <tr><td>1 • 0-2s</td><td>Smiling, hand wave to camera, friendly gesture</td><td>"Hi! Tingnan mo to!"</td><td>"Kumusta! Ipapakita ko sa'yo itong cool na item."</td></tr>
 <tr><td>2 • 2-4s</td><td>Hold product closer to camera, tilt to highlight details</td><td>"Ang ganda ng details!"</td><td>"Pansinin mo, ang linis at sleek ng design nito."</td></tr>
 <tr><td>3 • 4-6s</td><td>Flip the product to show the back, point to feature</td><td>"May back feature din siya!"</td><td>"May non-slip at foldable sa likod, kaya super handy."</td></tr>
 <tr><td>4 • 6-8s</td><td>Use product naturally, as if daily use, smile</td><td>"Perfect for daily use!"</td><td>"Magaan, madaling dalhin, bagay sa araw-araw."</td></tr>
 <tr><td>5 • 8-10s</td><td>Thumbs up, smiling, point down towards CTA</td><td>"Check out now!"</td><td>"Get yours now — nasa bio ang link! Salamat!"</td></tr>
 </table></div>
+
 </div>
 <div class="footer">
-<div class="f-left">VIDEO DETAILS<br>Duration: 10s • Aspect: 9:16 (1080×1920) • FPS: 30<br>Style: UGC Natural • Format: MP4</div>
-<div style="display:flex;gap:8px;align-items:center"><span class="status"><span class="dot"></span>Status: Ready to Generate</span><button class="btn btn-o">[ Export JSON ]</button><button class="btn btn-w">[ Generate Storyboard ▸ ]</button></div>
+<div style="font-size:11px;color:#aaa">VIDEO DETAILS<br>Duration: 10s • 9:16 • 30fps • UGC Natural • MP4</div>
+<div style="display:flex;gap:8px"><span class="status">● Ready</span><button class="btn btn-o" onclick="copyMaster()">[ Export JSON ]</button><button class="btn btn-w" onclick="copyMaster()">[ Generate + Copy Prompt ▸ ]</button></div>
 </div>
 </div>
-<div style="text-align:center;color:#555;font-size:10px;margin-top:12px;padding-bottom:20px">UGC Storyboard Generator • v1.0.0 • Premium • All content is user-generated • Built for TikTok • Dark Theme UI</div>
+<div class="toast" id="toast">✅ Copied!</div>
 <input type="file" id="avInput" hidden accept="image/*">
 <script>
+const scenes=[
+{time:"0-2s",title:"Cute wave & smile",sub:"Hi! Tingnan mo to!",prompt:"UGC selfie video, cute filipina model waving at camera, friendly smile, holding portable LED mirror, bright natural lighting, iPhone quality, vertical 9:16, photorealistic, keep model face identity from reference"},
+{time:"2-4s",title:"Show product up close",sub:"Ang ganda ng details!",prompt:"Close up UGC shot, model holding product front view closer to camera, tilt to show details, clean background, natural light, keep product exactly same as reference"},
+{time:"4-6s",title:"Flip to back view",sub:"May back feature din siya!",prompt:"UGC video model flipping product to show back side, pointing to foldable stand and non-slip feature, demonstrate, keep model identity"},
+{time:"6-8s",title:"Use it in real life",sub:"Perfect for daily use!",prompt:"Lifestyle UGC, model using LED makeup mirror naturally applying makeup, daily use scenario, bright room, iPhone video style, photorealistic"},
+{time:"8-10s",title:"Smile & CTA",sub:"Check out now!",prompt:"UGC closing shot, model smiling thumbs up pointing down to CTA, cheerful, product visible, vertical video, call to action energy"}
+];
+const grid=document.getElementById('storyGrid');
+scenes.forEach((s,i)=>{
+ const d=document.createElement('div'); d.className='card';
+ d.innerHTML=`<div class="card-head"><span class="badge bg-gray">Scene ${i+1}</span><span class="badge bg-yellow">${s.time}</span></div><div class="thumb">🖼️</div><div class="card-foot"><b>Scene ${i+1}: ${s.title}</b><i>${s.sub}</i><button class="copy-btn" onclick="copyScene(${i})">📋 Copy Scene ${i+1} Prompt</button></div>`;
+ grid.appendChild(d);
+});
+function copyScene(i){
+ const text=`Scene ${i+1} (${scenes[i].time}) - ${scenes[i].title}
+Prompt for GPT/Gemini:
+${scenes[i].prompt}
+Text Overlay: "${scenes[i].sub}"
+Voice Over: Tagalog female natural UGC voice
+Format: 9:16 vertical, 1080x1920, keep model + product locked`;
+ navigator.clipboard.writeText(text).then(()=>showToast(`Scene ${i+1} Copied!`));
+}
+function copyMaster(){
+ const t=document.getElementById('masterPrompt').innerText;
+ navigator.clipboard.writeText(t).then(()=>showToast("Master Prompt Copied! Paste to ChatGPT/Gemini!"));
+}
+function showToast(msg){
+ const toast=document.getElementById('toast'); toast.innerText="✅ "+msg; toast.style.display='block'; setTimeout(()=>toast.style.display='none',2500);
+}
 document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>p.classList.toggle('active'));
 document.getElementById('fBtn').onclick=()=>window.open('https://www.facebook.com/share/1Fs7NZdE1F/','_blank');
-const av=document.getElementById('av'),avInput=document.getElementById('avInput');
-av.onclick=()=>avInput.click();
-avInput.onchange=e=>{
- const f=e.target.files[0]; if(!f) return;
- const r=new FileReader(); r.onload=ev=>{av.innerHTML=`<img src="${ev.target.result}" style="width:100%;height:100%;object-fit:cover">`}; r.readAsDataURL(f);
-};
-function bind(id,thumbId){
+function bind(id){
  const box=document.getElementById(id),input=box.querySelector('input'),prev=box.querySelector('img.prev');
  box.onclick=()=>input.click();
  input.onchange=e=>{
-  const file=e.target.files[0]; if(!file) return;
-  const reader=new FileReader();
-  reader.onload=ev=>{
-   prev.src=ev.target.result; prev.hidden=false; box.classList.add('has');
-   const t=document.getElementById(thumbId);
-   if(t){t.innerHTML=`<img src="${ev.target.result}" style="width:100%;height:100%;object-fit:cover">`;}
-  }; reader.readAsDataURL(file);
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader(); r.onload=ev=>{prev.src=ev.target.result; prev.hidden=false; box.classList.add('has')}; r.readAsDataURL(f);
  };
 }
-bind('u1','t1');bind('u2','t2');bind('u3','t3');
+bind('u1');bind('u2');bind('u3');
 </script>
 </body></html>
