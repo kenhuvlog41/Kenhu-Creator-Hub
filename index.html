@@ -18,62 +18,30 @@
     return origAdd.call(this, type, listener, options);
   };
 })();
-</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KenhuVlog - With Copy Prompt</title>
-<style>
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KenhuVlog Final Same Size</title><style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
-body{background:#000;padding:14px;color:#fff}
-.shell{max-width:1040px;margin:0 auto;border:1px solid #cfcfcf;border-radius:14px;background:#0a0a0a;overflow:hidden}
-.top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #333}
-.left{display:flex;align-items:center;gap:12px}
-.avatar{width:52px;height:52px;border-radius:50%;border:1px solid #fff;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;background:#111}
-.name{font-size:24px;font-weight:800}
-.sub{font-size:13px;margin-top:4px;opacity:.8}
-.right{display:flex;align-items:center;gap:16px}
-.f-logo{width:44px;height:44px;border:1.5px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;cursor:pointer}
-.content{padding:18px 22px}
-.titlebox{border:1px solid #fff;border-radius:10px;padding:20px;text-align:center;margin-bottom:20px}
-.titlebox h1{font-size:26px;line-height:1.25;font-weight:800}
-.cat{font-size:14px;font-weight:700;margin:18px 0 12px}
-.pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
-.pill{border:1px solid #fff;border-radius:999px;padding:8px 18px;font-size:13px;font-weight:700;background:transparent;color:#fff;cursor:pointer}
-.pill.active{background:#fff;color:#000}
-.rowlabel{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;margin:26px 0 12px}
-.small-right{margin-left:auto;font-size:11px;color:#aaa;font-weight:400}
-.upload-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.up{border:1px dashed #888;border-radius:10px;background:#0e0e0e;height:162px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;position:relative;overflow:hidden;cursor:pointer}
-.up img.prev{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.up.has .txt{opacity:0}
-.up b{font-size:13px;display:block;margin:8px 0 4px}
-.up span{font-size:11px;color:#999}
-.story-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.card{border:1px solid #333;border-radius:10px;background:#111;overflow:hidden;position:relative}
-.card-head{display:flex;justify-content:space-between;padding:8px}
-.badge{font-size:11px;padding:4px 8px;border-radius:6px;font-weight:700}
-.bg-gray{background:#3a3a3a;color:#fff}
-.bg-orange{background:#f8b26a;color:#000}
-.bg-yellow{background:#fde68a;color:#000}
-.thumb{margin:0 8px;background:#6b6b6b;border-radius:6px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.thumb img{width:100%;height:100%;object-fit:cover}
-.card-foot{padding:10px 8px;text-align:center}
-.card-foot b{font-size:11px;display:block;line-height:1.2}
-.card-foot i{font-size:10px;color:#bbb;display:block;margin-top:4px}
-.copy-btn{margin-top:8px;width:100%;border:1px solid #fff;background:transparent;color:#fff;border-radius:6px;padding:6px;font-size:10px;font-weight:700;cursor:pointer}
-.copy-btn:hover{background:#fff;color:#000}
-.table-wrap{border:1px solid #fff;border-radius:10px;overflow:hidden;margin-top:10px}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th{padding:12px 10px;background:#161616;text-align:left;border-bottom:1px solid #333}
-td{padding:10px;border-bottom:1px solid #222;vertical-align:top}
-.prompt-box{margin-top:20px;border:1px solid #4ade80;border-radius:10px;background:#0f1a12;padding:16px}
-.prompt-box h3{color:#4ade80;font-size:14px;margin-bottom:10px}
-.prompt-text{background:#000;border:1px solid #333;border-radius:8px;padding:12px;font-size:11px;line-height:1.5;white-space:pre-wrap;color:#ddd;max-height:300px;overflow:auto}
-.footer{border-top:1px solid #333;margin-top:18px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.btn{padding:9px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer}
-.btn-o{border:1px solid #fff;background:transparent;color:#fff}
-.btn-w{background:#fff;color:#000;border:1px solid #fff}
-.status{border:1px solid #4ade80;color:#4ade80;border-radius:999px;padding:5px 10px;font-size:11px;display:inline-flex;gap:6px}
-@media(max-width:800px){.story-grid{grid-template-columns:repeat(2,1fr)}.upload-grid{grid-template-columns:1fr}}
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;color:#000;padding:10px 18px;border-radius:999px;font-size:12px;font-weight:700;z-index:100;display:none}
+body{background:#000;color:#fff;overflow-x:hidden}
+.shell{max-width:1040px;margin:0 auto;background:#000}
+@media(min-width:768px){.shell{border:1px solid #cfcfcf;border-radius:14px;background:#0a0a0a;margin:14px auto}body{padding:14px}}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #333;background:#0a0a0a}
+.left{display:flex;align-items:center;gap:10px}
+.avatar{width:40px;height:40px;border-radius:50%;border:1px solid #fff;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;background:#111}
+.name{font-size:18px;font-weight:800}.sub{font-size:10px;opacity:.8}
+.right{display:flex;gap:8px}.f-logo{width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;cursor:pointer}
+.content{padding:10px}@media(min-width:600px){.content{padding:18px 22px}}
+.titlebox{border:1px solid #fff;border-radius:10px;padding:12px;text-align:center;margin-bottom:14px}.titlebox h1{font-size:13px;font-weight:800;line-height:1.25}@media(min-width:600px){.titlebox h1{font-size:26px}}
+.cat{font-size:12px;font-weight:700;margin:14px 0 8px}.pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}.pill{border:1px solid #fff;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:700;background:transparent;color:#fff;cursor:pointer;white-space:nowrap}.pill.active{background:#fff;color:#000}
+.rowlabel{font-size:11px;font-weight:700;display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}.small-right{font-size:9px;color:#aaa;width:100%}@media(min-width:600px){.small-right{width:auto;margin-left:auto}}
+.upload-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.up{border:1px dashed #888;border-radius:8px;background:#0e0e0e;aspect-ratio:0.85;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px 4px;position:relative;overflow:hidden;cursor:pointer}@media(min-width:600px){.up{height:162px;aspect-ratio:auto;border-radius:10px;padding:12px}}.up img.prev{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.up .txt{position:relative;z-index:1}.up.has .txt{opacity:0}.up b{font-size:8px;display:block;margin:4px 0 2px}@media(min-width:600px){.up b{font-size:13px}}.up span{font-size:7px;color:#999}@media(min-width:600px){.up span{font-size:11px}}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}@media(min-width:900px){.story-grid{grid-template-columns:repeat(5,1fr);gap:10px}}
+.card{border:1px solid #333;border-radius:8px;background:#111;overflow:hidden;display:flex;flex-direction:column;width:100%;height:100%}
+.card-head{display:flex;justify-content:space-between;padding:5px;gap:3px}.badge{font-size:8px;padding:3px 5px;border-radius:4px;font-weight:700;white-space:nowrap}.bg-gray{background:#3a3a3a;color:#fff}.bg-yellow{background:#fde68a;color:#000}.bg-orange{background:#f8b26a;color:#000}
+.thumb{margin:0 4px;background:#6b6b6b;border-radius:4px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-foot{padding:6px 4px;text-align:center;flex:1;display:flex;flex-direction:column;justify-content:space-between}.card-foot b{font-size:8px;line-height:1.1}@media(min-width:600px){.card-foot b{font-size:11px}}.card-foot i{font-size:7px;color:#bbb;margin-top:2px}.copy-btn{margin-top:4px;width:100%;border:1px solid #fff;background:transparent;color:#fff;border-radius:4px;padding:4px 2px;font-size:7px;font-weight:700;cursor:pointer}
+.table-wrap{border:1px solid #fff;border-radius:8px;overflow:hidden;margin-top:8px;overflow-x:auto}.table-wrap table{width:100%;min-width:560px;border-collapse:collapse;font-size:10px}th{padding:8px 6px;background:#161616;text-align:left;border-bottom:1px solid #333}td{padding:8px 6px;border-bottom:1px solid #222;vertical-align:top}
+.prompt-box{margin-top:14px;border:1px solid #4ade80;border-radius:8px;background:#0f1a12;padding:10px}.prompt-box h3{color:#4ade80;font-size:11px;margin-bottom:6px}.prompt-text{background:#000;border:1px solid #333;border-radius:6px;padding:8px;font-size:9px;line-height:1.4;white-space:pre-wrap;color:#ddd;max-height:200px;overflow:auto;word-break:break-word}
+.footer{border-top:1px solid #333;margin-top:14px;padding:10px;display:flex;flex-direction:column;gap:8px}@media(min-width:600px){.footer{flex-direction:row;justify-content:space-between;padding:14px 20px}}.f-left{font-size:9px;color:#aaa;text-align:center}.footer-actions{display:flex;gap:6px;justify-content:center}.btn{padding:8px 10px;border-radius:6px;font-size:9px;font-weight:700;cursor:pointer}.btn-o{border:1px solid #fff;background:transparent;color:#fff}.btn-w{background:#fff;color:#000}.status{border:1px solid #4ade80;color:#4ade80;border-radius:999px;padding:4px 8px;font-size:9px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;color:#000;padding:10px 16px;border-radius:999px;font-size:11px;font-weight:700;z-index:100;display:none}
 </style></head><body>
 <div class="shell">
 <div class="top"><div class="left"><div class="avatar" id="av">👤</div><div><div class="name">KenhuVlog</div><div class="sub">Follow for more viral prompts</div></div></div><div class="right"><div class="f-logo" id="fBtn">f</div></div></div>
@@ -81,114 +49,39 @@ td{padding:10px;border-bottom:1px solid #222;vertical-align:top}
 <div class="titlebox"><h1>10-SECOND TIKTOK VIDEO STORYBOARD<br>• 5 SCENES x 2 SECONDS</h1></div>
 <div class="cat">Category:</div>
 <div class="pills"><button class="pill active">Beauty</button><button class="pill">Fashion</button><button class="pill">Health</button><button class="pill">Home</button><button class="pill">Food</button><button class="pill">Electronics</button><button class="pill">Toys</button></div>
-
 <div class="rowlabel">🔒 ROW 1 LOCKS — Upload assets to lock content</div>
 <div class="upload-grid">
 <div class="up" id="u1"><img class="prev" hidden><div class="txt"><div>☁️</div><b>Upload Your Model Here</b><span>PNG/JPG • ≤5MB</span></div><input type="file" hidden accept="image/*"></div>
-<div class="up" id="u2"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Front Here</b><span>Front view • Clean bg</span></div><input type="file" hidden accept="image/*"></div>
-<div class="up" id="u3"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Back Here</b><span>Back view • Clean bg</span></div><input type="file" hidden accept="image/*"></div>
+<div class="up" id="u2"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Front Here</b><span>Front view</span></div><input type="file" hidden accept="image/*"></div>
+<div class="up" id="u3"><img class="prev" hidden><div class="txt"><div>🔒</div><b>Upload Product Back Here</b><span>Back view</span></div><input type="file" hidden accept="image/*"></div>
 </div>
-
-<div class="rowlabel">🗂️ ROW 2 — 5 SCENE STORYBOARD <span class="small-right">Each scene = 2 seconds • 9:16 vertical</span></div>
+<div class="rowlabel">🗂️ ROW 2 — 5 SCENE STORYBOARD <span class="small-right">Each = 2s • 9:16 • 1080×1920</span></div>
 <div class="story-grid" id="storyGrid"></div>
+<div class="prompt-box"><h3>📋 MASTER PROMPT FOR CHATGPT / GEMINI</h3><div class="prompt-text" id="masterPrompt">Generate 5 UGC TikTok video scenes (2s each, 9:16, 1080x1920, 30fps, UGC Natural)
 
-<div class="prompt-box">
-<h3>📋 MASTER PROMPT FOR CHATGPT / GEMINI — COPY THIS!</h3>
-<div class="prompt-text" id="masterPrompt">Generate 5 UGC TikTok video scenes (2 seconds each, 9:16 vertical, 1080x1920, 30fps, UGC Natural style)
+MODEL LOCK: Use uploaded model photo
+PRODUCT LOCK: Use uploaded product front/back
 
-MODEL LOCK: Use uploaded model photo - keep same face, skin tone, hairstyle
-PRODUCT FRONT LOCK: Use uploaded product front image
-PRODUCT BACK LOCK: Use uploaded product back image
+SCENE 1 (0-2s): Smiling wave - Text: "Hi! Tingnan mo to!" - Prompt: UGC selfie filipina waving holding product iPhone keep identity
+SCENE 2 (2-4s): Show front details - Text: "Ang ganda ng details!" - Prompt: Close up front view details
+SCENE 3 (4-6s): Flip to back - Text: "May back feature!" - Prompt: Flip to back point feature
+SCENE 4 (6-8s): Real life use - Text: "Perfect for daily!" - Prompt: Lifestyle using mirror
+SCENE 5 (8-10s): CTA - Text: "Check out now!" - Prompt: Smile thumbs up CTA
 
-Category: Beauty / Portable LED Mirror
-
-SCENE 1 (0-2s): Smiling, hand wave to camera, friendly gesture
-- Text Overlay: "Hi! Tingnan mo to!" 
-- Voice Over (Female Tagalog): "Kumusta! Ipapakita ko sa'yo itong cool na item."
-- Prompt: "UGC selfie video, cute filipina model waving, holding product, bright natural lighting, iPhone quality, vertical 9:16, photorealistic, keep model identity"
-
-SCENE 2 (2-4s): Hold product closer to camera, tilt to highlight details
-- Text Overlay: "Ang ganda ng details!"
-- Voice Over: "Pansinin mo, ang linis at sleek ng design nito."
-- Prompt: "Close up of model holding portable LED makeup mirror front view, show details, natural background, UGC style"
-
-SCENE 3 (4-6s): Flip the product to show the back, point to feature
-- Text Overlay: "May back feature din siya!"
-- Voice Over: "May non-slip at foldable sa likod, kaya super handy."
-- Prompt: "Model flipping product to show back side, pointing to foldable stand feature, UGC demo"
-
-SCENE 4 (6-8s): Use product naturally, as if daily use, smile
-- Text Overlay: "Perfect for daily use!"
-- Voice Over: "Magaan, madaling dalhin, bagay sa araw-araw."
-- Prompt: "Model using LED mirror in real life, applying makeup, natural light, lifestyle UGC"
-
-SCENE 5 (8-10s): Thumbs up, smiling, point down towards CTA
-- Text Overlay: "Check out now!"
-- Voice Over: "Get yours now — nasa bio ang link! Salamat!"
-- Prompt: "Model smiling thumbs up, pointing down to CTA, cheerful, UGC closing shot, keep product visible"
-
-Style: UGC Natural, iPhone, bright, Tagalog subtitles, no watermark</div>
-<button class="btn btn-w" style="margin-top:10px;width:100%" onclick="copyMaster()">📋 COPY MASTER PROMPT FOR GPT/GEMINI</button>
-</div>
-
+Style: UGC Natural, bright, Tagalog subs</div><button class="btn btn-w" style="width:100%;margin-top:8px;min-height:44px" onclick="copyMaster()">📋 COPY FOR GPT/GEMINI</button></div>
 <div class="rowlabel">🗂️ SCENE DETAILS TABLE</div>
-<div class="table-wrap"><table>
-<tr><th>Scene</th><th>Pose / Movement</th><th>Text Overlay — Tagalog</th><th>Voice Over — Female (Tagalog)</th></tr>
-<tr><td>1 • 0-2s</td><td>Smiling, hand wave to camera, friendly gesture</td><td>"Hi! Tingnan mo to!"</td><td>"Kumusta! Ipapakita ko sa'yo itong cool na item."</td></tr>
-<tr><td>2 • 2-4s</td><td>Hold product closer to camera, tilt to highlight details</td><td>"Ang ganda ng details!"</td><td>"Pansinin mo, ang linis at sleek ng design nito."</td></tr>
-<tr><td>3 • 4-6s</td><td>Flip the product to show the back, point to feature</td><td>"May back feature din siya!"</td><td>"May non-slip at foldable sa likod, kaya super handy."</td></tr>
-<tr><td>4 • 6-8s</td><td>Use product naturally, as if daily use, smile</td><td>"Perfect for daily use!"</td><td>"Magaan, madaling dalhin, bagay sa araw-araw."</td></tr>
-<tr><td>5 • 8-10s</td><td>Thumbs up, smiling, point down towards CTA</td><td>"Check out now!"</td><td>"Get yours now — nasa bio ang link! Salamat!"</td></tr>
-</table></div>
-
+<div class="table-wrap"><table><tr><th>Scene</th><th>Pose</th><th>Text Overlay</th><th>Voice Over</th></tr><tr><td>1 • 0-2s</td><td>Smiling wave</td><td>"Hi! Tingnan mo to!"</td><td>"Kumusta! Ipapakita ko..."</td></tr><tr><td>2 • 2-4s</td><td>Hold close</td><td>"Ang ganda ng details!"</td><td>"Ang linis at sleek..."</td></tr><tr><td>3 • 4-6s</td><td>Flip to back</td><td>"May back feature!"</td><td>"May non-slip..."</td></tr><tr><td>4 • 6-8s</td><td>Real use</td><td>"Perfect for daily!"</td><td>"Magaan, bagay..."</td></tr><tr><td>5 • 8-10s</td><td>Thumbs up CTA</td><td>"Check out now!"</td><td>"Nasa bio link!"</td></tr></table></div>
 </div>
-<div class="footer">
-<div style="font-size:11px;color:#aaa">VIDEO DETAILS<br>Duration: 10s • 9:16 • 30fps • UGC Natural • MP4</div>
-<div style="display:flex;gap:8px"><span class="status">● Ready</span><button class="btn btn-o" onclick="copyMaster()">[ Export JSON ]</button><button class="btn btn-w" onclick="copyMaster()">[ Generate + Copy Prompt ▸ ]</button></div>
+<div class="footer"><div class="f-left">VIDEO DETAILS<br>10s • 9:16 • 30fps • UGC Natural • MP4</div><div class="footer-actions"><span class="status">● Ready</span><button class="btn btn-o" onclick="copyMaster()">Export</button><button class="btn btn-w" onclick="copyMaster()">Generate ▸</button></div></div>
 </div>
-</div>
-<div class="toast" id="toast">✅ Copied!</div>
-<input type="file" id="avInput" hidden accept="image/*">
+<div class="toast" id="toast">Copied!</div><input type="file" id="avInput" hidden accept="image/*">
 <script>
-const scenes=[
-{time:"0-2s",title:"Cute wave & smile",sub:"Hi! Tingnan mo to!",prompt:"UGC selfie video, cute filipina model waving at camera, friendly smile, holding portable LED mirror, bright natural lighting, iPhone quality, vertical 9:16, photorealistic, keep model face identity from reference"},
-{time:"2-4s",title:"Show product up close",sub:"Ang ganda ng details!",prompt:"Close up UGC shot, model holding product front view closer to camera, tilt to show details, clean background, natural light, keep product exactly same as reference"},
-{time:"4-6s",title:"Flip to back view",sub:"May back feature din siya!",prompt:"UGC video model flipping product to show back side, pointing to foldable stand and non-slip feature, demonstrate, keep model identity"},
-{time:"6-8s",title:"Use it in real life",sub:"Perfect for daily use!",prompt:"Lifestyle UGC, model using LED makeup mirror naturally applying makeup, daily use scenario, bright room, iPhone video style, photorealistic"},
-{time:"8-10s",title:"Smile & CTA",sub:"Check out now!",prompt:"UGC closing shot, model smiling thumbs up pointing down to CTA, cheerful, product visible, vertical video, call to action energy"}
-];
-const grid=document.getElementById('storyGrid');
-scenes.forEach((s,i)=>{
- const d=document.createElement('div'); d.className='card';
- d.innerHTML=`<div class="card-head"><span class="badge bg-gray">Scene ${i+1}</span><span class="badge bg-yellow">${s.time}</span></div><div class="thumb">🖼️</div><div class="card-foot"><b>Scene ${i+1}: ${s.title}</b><i>${s.sub}</i><button class="copy-btn" onclick="copyScene(${i})">📋 Copy Scene ${i+1} Prompt</button></div>`;
- grid.appendChild(d);
-});
-function copyScene(i){
- const text=`Scene ${i+1} (${scenes[i].time}) - ${scenes[i].title}
-Prompt for GPT/Gemini:
-${scenes[i].prompt}
-Text Overlay: "${scenes[i].sub}"
-Voice Over: Tagalog female natural UGC voice
-Format: 9:16 vertical, 1080x1920, keep model + product locked`;
- navigator.clipboard.writeText(text).then(()=>showToast(`Scene ${i+1} Copied!`));
-}
-function copyMaster(){
- const t=document.getElementById('masterPrompt').innerText;
- navigator.clipboard.writeText(t).then(()=>showToast("Master Prompt Copied! Paste to ChatGPT/Gemini!"));
-}
-function showToast(msg){
- const toast=document.getElementById('toast'); toast.innerText="✅ "+msg; toast.style.display='block'; setTimeout(()=>toast.style.display='none',2500);
-}
-document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>p.classList.toggle('active'));
-document.getElementById('fBtn').onclick=()=>window.open('https://www.facebook.com/share/1Fs7NZdE1F/','_blank');
-function bind(id){
- const box=document.getElementById(id),input=box.querySelector('input'),prev=box.querySelector('img.prev');
- box.onclick=()=>input.click();
- input.onchange=e=>{
-  const f=e.target.files[0]; if(!f) return;
-  const r=new FileReader(); r.onload=ev=>{prev.src=ev.target.result; prev.hidden=false; box.classList.add('has')}; r.readAsDataURL(f);
- };
-}
+const scenes=[{time:"0-2s",title:"Cute wave & smile",sub:"Hi! Tingnan mo to!",prompt:"UGC selfie filipina waving holding LED mirror iPhone keep identity"},{time:"2-4s",title:"Show product up close",sub:"Ang ganda ng details!",prompt:"Close up front view product details UGC"},{time:"4-6s",title:"Flip to back view",sub:"May back feature!",prompt:"Flip to back point foldable feature"},{time:"6-8s",title:"Use it in real life",sub:"Perfect for daily!",prompt:"Lifestyle using mirror applying makeup"},{time:"8-10s",title:"Smile & CTA",sub:"Check out now!",prompt:"Smile thumbs up CTA pointing down"}];
+const grid=document.getElementById('storyGrid');scenes.forEach((s,i)=>{const d=document.createElement('div');d.className='card';d.innerHTML=`<div class="card-head"><span class="badge bg-gray">Scene ${i+1}</span><span class="badge ${i%2==0?'bg-orange':'bg-yellow'}">${s.time}</span></div><div class="thumb">🖼️</div><div class="card-foot"><b>Scene ${i+1}: ${s.title}</b><i>${s.sub}</i><button class="copy-btn" onclick="copyScene(${i})">📋 Copy</button></div>`;grid.appendChild(d);});
+function copyScene(i){const t=`Scene ${i+1} (${scenes[i].time}) - ${scenes[i].title}\nPrompt: ${scenes[i].prompt}\nText: "${scenes[i].sub}"\nFormat: 9:16 1080x1920`;navigator.clipboard.writeText(t).then(()=>showToast(`Scene ${i+1} Copied!`));}
+function copyMaster(){const t=document.getElementById('masterPrompt').innerText;navigator.clipboard.writeText(t).then(()=>showToast("Master Prompt Copied!"));}
+function showToast(m){const t=document.getElementById('toast');t.innerText="✅ "+m;t.style.display='block';setTimeout(()=>t.style.display='none',2500);}
+document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>p.classList.toggle('active'));document.getElementById('fBtn').onclick=()=>window.open('https://www.facebook.com/share/1Fs7NZdE1F/','_blank');document.getElementById('av').onclick=()=>document.getElementById('avInput').click();document.getElementById('avInput').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{document.getElementById('av').innerHTML=`<img src="${ev.target.result}" style="width:100%;height:100%;object-fit:cover">`};r.readAsDataURL(f);};function bind(id){const box=document.getElementById(id),input=box.querySelector('input'),prev=box.querySelector('img.prev');box.onclick=()=>input.click();input.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{prev.src=ev.target.result;prev.hidden=false;box.classList.add('has')};r.readAsDataURL(f);};}
 bind('u1');bind('u2');bind('u3');
 </script>
 </body></html>
